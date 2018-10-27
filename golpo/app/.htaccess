@@ -1,0 +1,3 @@
+Order deny,allow
+Deny from all
+SetEnv MAGE_IS_DEVELOPER_MODE true

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<config>
+    <modules>
+        <Session_Complexworld>
+            <version>0.1.0</version>
+        </Session_Complexworld>
+    </modules>
+    <frontend>
+        <routers>
+            <complexworld>
+                <use>standard</use>
+                <args>
+                    <module>Session_Complexworld</module>
+                    <frontName>complexworld</frontName>
+                </args>
+            </complexworld>
+        </routers>
+    </frontend>
+    <global>
+    
+        <!-- ... -->
+        <models>
+            <!-- ... -->
+            <complexworld>
+                <class>Session_Complexworld_Model</class>
+                <resourceModel>complexworld_resource</resourceModel>
+            </complexworld>
+            <!-- ... -->
+            <complexworld_resource>
+                <class>Session_Complexworld_Model_Resource</class>
+                <entities>
+                    <eavblogpost>
+                        <table>eavblog_posts</table>
+                    </eavblogpost>
+                </entities>
+            </complexworld_resource>
+        </models>
+        <!-- ... -->
+        <resources>
+            <complexworld_setup>
+                <setup>
+                    <module>Session_Complexworld</module>
+                    <class>Session_Complexworld_Model_Resource_Setup</class>
+                </setup>
+            </complexworld_setup>
+        </resources>
+    </global>
+    
+</config>
