@@ -26,7 +26,20 @@
                 <module>Session_Weblog</module>
                 <class>Session_Weblog_Model_Resource_Setup</class>
             </setup>
+            <connection>
+                <use>core_setup</use>
+            </connection>
         </weblog_setup>
+        <session_write>
+            <connection>
+                <use>core_write</use>
+            </connection>
+        </session_write>
+        <session_read>
+            <connection>
+                <use>core_read</use>
+            </connection>
+        </session_read>
     </resources>
     </global>
     <frontend>
